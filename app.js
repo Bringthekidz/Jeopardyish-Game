@@ -133,10 +133,10 @@ function addCatergory(catergory){
             card.innerHTML = 300
         }
 
-        card.setAttribute('data-question', questions.question)
-        card.setAttribute('data-answer-1', questions.answers[0])
-        card.setAttribute('data-answer-1',questions.answers[1])
-        card.setAttribute('data-correct', questions.correct)
+        card.setAttribute('data-question', question.question)
+        card.setAttribute('data-answer-1', question.answers[0])
+        card.setAttribute('data-answer-1', question.answers[1])
+        card.setAttribute('data-correct', question.correct)
         card.setAttribute('data-value', card.getInnerHTML())
 
         card.addEventListener('click', flipCard)
@@ -147,7 +147,7 @@ function addCatergory(catergory){
 jeopardyCatergories.forEach(catergory => addCatergory(catergory))
 
 function flipCard(){
-    this.innerHTML = " "
+    this.innerHTML = ""
     this.style.fontSize = "15px"
     this.style.lineHeight = "15px"
     const textDisplay = document.createElement('div')
@@ -180,10 +180,9 @@ function getResult(){
                 cardOfButton.removeChild(cardOfButton.lastChild)
             }
                 cardOfButton.innerHTML = cardOfButton.getAttribute('data-value')
-        })
+        },100)
         
 
-        } 100;
         } else {
              cardOfButton.classList.add('wrong-answer')
         setTimeout(() => {
@@ -195,5 +194,6 @@ function getResult(){
 
     }
     cardOfButton.removeEventListener('click', flipCard)
+}
 
 

@@ -184,8 +184,8 @@ function getResult(){
         
 
         } 100;
-     } else {
-        cardOfButton.classList.add('wrong-answer')
+        } else {
+             cardOfButton.classList.add('wrong-answer')
         setTimeout(() => {
             while(cardOfButton.firstChild) {
                 cardOfButton.removeChild(cardOfButton.lastChild)

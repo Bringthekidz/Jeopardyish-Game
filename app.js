@@ -180,11 +180,11 @@ function getResult(){
                 cardOfButton.removeChild(cardOfButton.lastChild)
             }
                 cardOfButton.innerHTML = cardOfButton.getAttribute('data-value')
-        })
+        }, 100)
         
 
-        } 100;
-     } else {
+
+    } else {
         cardOfButton.classList.add('wrong-answer')
         setTimeout(() => {
             while(cardOfButton.firstChild) {
@@ -196,4 +196,4 @@ function getResult(){
     }
     cardOfButton.removeEventListener('click', flipCard)
 
-
+}

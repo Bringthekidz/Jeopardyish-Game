@@ -38,7 +38,7 @@ const jeopardyCatergories = [
              },
 
             {
-                question: 'Where in the United States is the Dude Perfect Headquarters?',
+                question: 'Where is the Dude Perfect Headquarters?',
                 answers: [ 'Miami,Florida', 'Frisco,Texas'],
                 correct: 'Frisco,Texas',
                 level: 'medium',
@@ -73,7 +73,7 @@ const jeopardyCatergories = [
             },
             {
                 question: 'What is the strongest material in the world?',
-                answers: [ 'Diamonds', 'Graphene'],
+                answers:[ 'Diamonds', 'Graphene'],
                 correct: 'Graphene',
                 level: 'hard',
             },

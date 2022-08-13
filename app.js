@@ -6,10 +6,16 @@ const jeopardyCatergories = [
         genre: "WHO",
         questions: [
             {
-                question: 'Who wrote Harry Potter series?',
+                question: 'Who wrote the Harry Potter series?',
                 answers: ['JK Rowling', 'JRR Tolkien'],
                 correct: 'JK Rowling',
                 level: 'easy',
+            },
+            {
+                question: 'Who sings the song Fix My Eyes?',
+                answers: ['Katy Perry','for KING and COUNTRY'],
+                correct: 'for KING and COUNTRY',
+                level: 'medium'
             },
             {
 
@@ -18,26 +24,21 @@ const jeopardyCatergories = [
                 correct: 'Isaace Larian',
                 level: 'hard',
             },
-            {
-                question: 'Who sings the song Fix My Eyes?',
-                answers: ['Katy Perry','for KING and COUNTRY'],
-                correct: 'for KING and COUNTRY',
-                level: 'easy'
-            },
-
-            {
-                question: 'Who is the flying tomatoe?',
-                answers: ['Bob the Tomatoe', ' Shaun White'],
-                correct: 'Shaun White',
-               level: 'easy',
-        }
+        
         ]
     },
     {
         genre: "WHERE",
         questions:  [
             {
-                question: 'Where in the United States is the Dude Perfect Headquarters?',
+                question: 'Where does the US President live?',
+                answers: ['Washington, D.C.', 'Bacon Level, Alabama'],
+                correct: 'Washington, D.C',
+                level: 'easy',
+             },
+
+            {
+                question: 'Where is the Dude Perfect Headquarters?',
                 answers: [ 'Miami,Florida', 'Frisco,Texas'],
                 correct: 'Frisco,Texas',
                 level: 'medium',
@@ -50,36 +51,16 @@ const jeopardyCatergories = [
                 level: 'hard'
 
 
-             },
-             {
-
-                question: 'Where is Cadbury Chocolate Factory located?',
-                answers: [ 'Hersey, Pennsylvania', 'Bournville, Birmingham, UK'],
-                correct: 'Bournville, Birmingham, UK',
-                level: 'hard',
-             },
-
-             {
-                question: 'Where does the US President live?',
-                answers: ['Washington, D.C.', 'Bacon Level, Alabama'],
-                correct: 'Washington, D.C',
-                level: 'easy',
-             }
-    
+             },      
+          
          ]
     },
     {
         genre: 'WHAT',
         questions: [
             {
-                question: 'What do caterpillars turn into?',
-                answers: ['Butterflies', 'Worms'],
-                correct: 'Butterflies',
-                level: 'easy',
-            },
-            {
-                question: 'What is the color of a ruby',
-                answers: ['Purple' , 'Red',],
+                question: 'What is the color of a ruby?',
+                answers: ['Purple' , 'Red'],
                 correct: 'Red',
                 level: 'easy',
 
@@ -95,7 +76,7 @@ const jeopardyCatergories = [
                 answers:[ 'Diamonds', 'Graphene'],
                 correct: 'Graphene',
                 level: 'hard',
-            } ,
+            },
 
         ]
     }
@@ -146,10 +127,10 @@ function addCatergory(catergory){
 
 jeopardyCatergories.forEach(catergory => addCatergory(catergory))
 
-function flipCard(){
-    this.innerHTML = " "
+function flipCard() {
+    this.innerHTML = ""
     this.style.fontSize = "15px"
-    this.style.lineHeight = "15px"
+    this.style.lineHeight = "30px"
     const textDisplay = document.createElement('div')
     textDisplay.classList.add('card-text')
     textDisplay.innerHTML = this.getAttribute('data-question')
@@ -159,7 +140,7 @@ function flipCard(){
     secondButton.classList.add('second-button')
     firstButton.innerHTML = this.getAttribute('data-answer-1')
     secondButton.innerHTML = this.getAttribute('data-answer-2')
-    this.append(textDisplay,firstButton,secondButton)
+    this.append(textDisplay, firstButton, secondButton)
 
     const allCards = Array.from(document.querySelectorAll('card'))
     allCards.forEach(card => card.removeEventListener('click',flipCard))
@@ -180,12 +161,11 @@ function getResult(){
                 cardOfButton.removeChild(cardOfButton.lastChild)
             }
                 cardOfButton.innerHTML = cardOfButton.getAttribute('data-value')
-        }, 100)
+        },100)
         
 
-
-    } else {
-        cardOfButton.classList.add('wrong-answer')
+        } else {
+             cardOfButton.classList.add('wrong-answer')
         setTimeout(() => {
             while(cardOfButton.firstChild) {
                 cardOfButton.removeChild(cardOfButton.lastChild)
@@ -195,5 +175,6 @@ function getResult(){
 
     }
     cardOfButton.removeEventListener('click', flipCard)
-
 }
+
+

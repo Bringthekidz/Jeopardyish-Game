@@ -6,10 +6,16 @@ const jeopardyCatergories = [
         genre: "WHO",
         questions: [
             {
-                question: 'Who wrote Harry Potter series?',
+                question: 'Who wrote the Harry Potter series?',
                 answers: ['JK Rowling', 'JRR Tolkien'],
                 correct: 'JK Rowling',
                 level: 'easy',
+            },
+            {
+                question: 'Who sings the song Fix My Eyes?',
+                answers: ['Katy Perry','for KING and COUNTRY'],
+                correct: 'for KING and COUNTRY',
+                level: 'medium'
             },
             {
 
@@ -18,24 +24,19 @@ const jeopardyCatergories = [
                 correct: 'Isaace Larian',
                 level: 'hard',
             },
-            {
-                question: 'Who sings the song Fix My Eyes?',
-                answers: ['Katy Perry','for KING and COUNTRY'],
-                correct: 'for KING and COUNTRY',
-                level: 'easy'
-            },
-
-            {
-                question: 'Who is the flying tomatoe?',
-                answers: ['Bob the Tomatoe', ' Shaun White'],
-                correct: 'Shaun White',
-               level: 'easy',
-        }
+        
         ]
     },
     {
         genre: "WHERE",
         questions:  [
+            {
+                question: 'Where does the US President live?',
+                answers: ['Washington, D.C.', 'Bacon Level, Alabama'],
+                correct: 'Washington, D.C',
+                level: 'easy',
+             },
+
             {
                 question: 'Where in the United States is the Dude Perfect Headquarters?',
                 answers: [ 'Miami,Florida', 'Frisco,Texas'],
@@ -50,36 +51,17 @@ const jeopardyCatergories = [
                 level: 'hard'
 
 
-             },
-             {
-
-                question: 'Where is Cadbury Chocolate Factory located?',
-                answers: [ 'Hersey, Pennsylvania', 'Bournville, Birmingham, UK'],
-                correct: 'Bournville, Birmingham, UK',
-                level: 'hard',
-             },
-
-             {
-                question: 'Where does the US President live?',
-                answers: ['Washington, D.C.', 'Bacon Level, Alabama'],
-                correct: 'Washington, D.C',
-                level: 'easy',
-             }
-    
+             },      
+          
          ]
     },
     {
         genre: 'WHAT',
         questions: [
+            
             {
-                question: 'What do caterpillars turn into?',
-                answers: ['Butterflies', 'Worms'],
-                correct: 'Butterflies',
-                level: 'easy',
-            },
-            {
-                question: 'What is the color of a ruby',
-                answers: ['Purple' , 'Red',],
+                question: 'What is the color of a ruby?',
+                answers: ['Purple' , 'Red'],
                 correct: 'Red',
                 level: 'easy',
 
@@ -95,7 +77,7 @@ const jeopardyCatergories = [
                 answers:[ 'Diamonds', 'Graphene'],
                 correct: 'Graphene',
                 level: 'hard',
-            } ,
+            },
 
         ]
     }
@@ -135,7 +117,7 @@ function addCatergory(catergory){
 
         card.setAttribute('data-question', question.question)
         card.setAttribute('data-answer-1', question.answers[0])
-        card.setAttribute('data-answer-1', question.answers[1])
+        card.setAttribute('data-answer-2', question.answers[1])
         card.setAttribute('data-correct', question.correct)
         card.setAttribute('data-value', card.getInnerHTML())
 

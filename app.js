@@ -86,7 +86,7 @@ const jeopardyCatergories = [
             },
             {
                 question:'What is an americano?',
-                anwers: ['espresso shots with hot water', 'Coffee,cream and sugar'],
+                answers: ['espresso shots with hot water', 'Coffee,cream and sugar'],
                 correct: 'espresso shots with hot water',
                 level: 'medium',
             },
@@ -133,10 +133,10 @@ function addCatergory(catergory){
             card.innerHTML = 300
         }
 
-        card.setAttribute('data-question', questions.question)
-        card.setAttribute('data-answer-1', questions.answers[0])
-        card.setAttribute('data-answer-1',questions.answers[1])
-        card.setAttribute('data-correct', questions.correct)
+        card.setAttribute('data-question', question.question)
+        card.setAttribute('data-answer-1', question.answers[0])
+        card.setAttribute('data-answer-2', question.answers[1])
+        card.setAttribute('data-correct', question.correct)
         card.setAttribute('data-value', card.getInnerHTML())
 
         card.addEventListener('click', flipCard)

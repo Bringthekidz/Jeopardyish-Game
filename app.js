@@ -66,8 +66,8 @@ const jeopardyCatergories = [
 
             },
             {
-                question: 'What is an americano?',
-                anwers: ['espresso shots with hot water', 'Coffee,cream and sugar'],
+                question:'What is an americano?',
+                answers: ['espresso shots with hot water', 'Coffee,cream and sugar'],
                 correct: 'espresso shots with hot water',
                 level: 'medium',
             },

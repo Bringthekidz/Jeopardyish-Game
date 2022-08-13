@@ -58,7 +58,6 @@ const jeopardyCatergories = [
     {
         genre: 'WHAT',
         questions: [
-            
             {
                 question: 'What is the color of a ruby?',
                 answers: ['Purple' , 'Red'],
@@ -67,14 +66,14 @@ const jeopardyCatergories = [
 
             },
             {
-                question:'What is an americano?',
+                question: 'What is an americano?',
                 anwers: ['espresso shots with hot water', 'Coffee,cream and sugar'],
                 correct: 'espresso shots with hot water',
                 level: 'medium',
             },
             {
                 question: 'What is the strongest material in the world?',
-                answers:[ 'Diamonds', 'Graphene'],
+                answers: [ 'Diamonds', 'Graphene'],
                 correct: 'Graphene',
                 level: 'hard',
             },
@@ -128,10 +127,10 @@ function addCatergory(catergory){
 
 jeopardyCatergories.forEach(catergory => addCatergory(catergory))
 
-function flipCard(){
+function flipCard() {
     this.innerHTML = ""
     this.style.fontSize = "15px"
-    this.style.lineHeight = "15px"
+    this.style.lineHeight = "30px"
     const textDisplay = document.createElement('div')
     textDisplay.classList.add('card-text')
     textDisplay.innerHTML = this.getAttribute('data-question')
@@ -141,7 +140,7 @@ function flipCard(){
     secondButton.classList.add('second-button')
     firstButton.innerHTML = this.getAttribute('data-answer-1')
     secondButton.innerHTML = this.getAttribute('data-answer-2')
-    this.append(textDisplay,firstButton,secondButton)
+    this.append(textDisplay, firstButton, secondButton)
 
     const allCards = Array.from(document.querySelectorAll('card'))
     allCards.forEach(card => card.removeEventListener('click',flipCard))

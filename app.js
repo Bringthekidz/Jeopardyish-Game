@@ -142,13 +142,13 @@ function flipCard() {
     secondButton.innerHTML = this.getAttribute('data-answer-2')
     this.append(textDisplay, firstButton, secondButton)
 
-    const allCards = Array.from(document.querySelectorAll('card'))
+    const allCards = Array.from(document.querySelectorAll('.card'))
     allCards.forEach(card => card.removeEventListener('click',flipCard))
 
 }
 
 function getResult(){
-    const allCards = Array.from(document.querySelectorAll('card'))
+    const allCards = Array.from(document.querySelectorAll('.card'))
     allCards.forEach(card => card.addEventListener('click', flipCard))
     const cardOfButton = this.parentElement
 
@@ -157,7 +157,7 @@ function getResult(){
         scoreDisplay.innerHTML = score
         cardOfButton.classList.add('correct-answer')
         setTimeout(() => {
-            while(cardOfButton.firstChild) {
+            while (cardOfButton.firstChild) {
                 cardOfButton.removeChild(cardOfButton.lastChild)
             }
                 cardOfButton.innerHTML = cardOfButton.getAttribute('data-value')

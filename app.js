@@ -21,7 +21,7 @@ const jeopardyCatergories = [
 
                 question: 'Who is the creator of the L.O.L. dolls?',
                 answers: ['Isaac Larian', 'Harry Styles'],
-                correct: 'Isaace Larian',
+                correct: 'Isaac Larian',
                 level: 'hard',
             },
         
@@ -67,7 +67,7 @@ const jeopardyCatergories = [
             },
             {
                 question: 'What is an americano?',
-                anwers: ['espresso shots with hot water', 'Coffee,cream and sugar'],
+                answers: ['espresso shots with hot water', 'Coffee,cream and sugar'],
                 correct: 'espresso shots with hot water',
                 level: 'medium',
             },

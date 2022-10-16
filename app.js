@@ -104,7 +104,7 @@ function addCatergory(catergory){
         card.classList.add('card')
         column.append(card)
 
-        if(question.level === 'easy') {
+        if (question.level === 'easy') {
             card.innerHTML = 100
         }
         if (question.level === 'medium') {
@@ -140,10 +140,12 @@ function flipCard() {
     secondButton.classList.add('second-button')
     firstButton.innerHTML = this.getAttribute('data-answer-1')
     secondButton.innerHTML = this.getAttribute('data-answer-2')
+    firstButton.addEventListener('click', getResult)
+    secondButton.addEventListener('click', getResult)
     this.append(textDisplay, firstButton, secondButton)
 
     const allCards = Array.from(document.querySelectorAll('.card'))
-    allCards.forEach(card => card.removeEventListener('click',flipCard))
+    allCards.forEach(card => card.removeEventListener('click', flipCard))
 
 }
 

@@ -33,7 +33,7 @@ const jeopardyCatergories = [
             {
                 question: 'Where does the US President live?',
                 answers: ['Washington, D.C.', 'Bacon Level, Alabama'],
-                correct: 'Washington, D.C',
+                correct: 'Washington, D.C.',
                 level: 'easy',
              },
 

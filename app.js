@@ -28,6 +28,31 @@ const jeopardyCatergories = [
         ]
     },
     {
+        genre: "WHEN",
+        questions: [
+            {
+                question: 'When is Cinco de Mayo',
+                answers: ['May 5th', 'Taco Tuesday'],
+                correct: 'May 5th',
+                level: 'easy',
+            },
+            {
+                question: 'When was the ice age?',
+                answers: ['1.7 million years ago','2.4 million years ago'],
+                correct: '2.4 million years ago',
+                level: 'medium'
+            },
+            {
+
+                question: 'When is the best time of day for surfing?',
+                answers: ['early with the sunrise', 'later is better'],
+                correct: 'early with the sunrise',
+                level: 'hard',
+            },
+        
+        ]
+    },
+    {
         genre: "WHERE",
         questions:  [
             {

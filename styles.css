@@ -39,11 +39,11 @@ body{
 
 
 .first-button {
-    background-color: rgb(24,171,24);
+    background-color: #a01ee1;
 }
 
 .second-button {
-    background-color: rgb(190,57,37);
+    background-color: #5FE11E;
 }
 
 .genre-title {
@@ -55,7 +55,7 @@ body{
 }
 
 .correct-answer {
-    background-color: rgb(186,186,24);
+    background-color:  #E7DD18;
 
 }
 
